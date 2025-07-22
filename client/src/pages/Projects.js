@@ -2,6 +2,7 @@ import React from 'react';
 import download from '../images/download.png';
 import lm from '../images/lm.jpg';
 import webdevelopment from '../images/web development.jpg';
+import ProjectForm from '../components/ProjectForm'; // ✅ Import your form
 
 function Projects() {
   const projects = [
@@ -25,6 +26,7 @@ function Projects() {
   return (
     <section>
       <h2>Projects</h2>
+
       <div>
         {projects.map((proj, index) => (
           <div key={index}>
@@ -33,6 +35,12 @@ function Projects() {
             <p>{proj.desc}</p>
           </div>
         ))}
+      </div>
+
+      {/* ✅ Add Project Form */}
+      <div style={{ marginTop: '40px' }}>
+        <h3>Add a New Project</h3>
+        <ProjectForm />
       </div>
     </section>
   );

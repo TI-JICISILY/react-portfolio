@@ -1,12 +1,20 @@
 const mongoose = require('mongoose');
 
 const qualificationSchema = new mongoose.Schema({
-  title: String,
-  firstname: String,
-  lastname: String,
-  email: String,
-  completion: Date,
-  description: String
+  degree: {
+    type: String,
+    required: true
+  },
+  institution: {
+    type: String,
+    required: true
+  },
+  year: {
+    type: Number,
+    required: true
+  }
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('Qualification', qualificationSchema);
