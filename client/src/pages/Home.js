@@ -5,7 +5,7 @@ function Home() {
   return (
     <section>
       <h1>Welcome to My Portfolio</h1>
-      <p>Mission: To build elegant and efficient web applications.</p>
+       <p>This portfolio was built using React, optimized, and deployed with CI/CD.</p>
       <Link to="/about">
         <button>Learn More About Me</button>
       </Link>
